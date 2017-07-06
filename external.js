@@ -1,5 +1,21 @@
 var webPage ="http://instagram.com";
 
+var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status == 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status);
+      }
+    };
+    xhr.send();
+};
+
+
 function createWebPage() {
   var name = document.getElementById('searchTxt').value;
   return webPage + "/" + name + "/";
@@ -7,12 +23,8 @@ function createWebPage() {
 
 
 function goToInstagramPage() {
-  var page = createWebPage();
-  var req = new XMLHttpRequest();
-  req.open('GET', page, false);
-  document.write(req);
-  req.send(null);
-  if(req.status == 200) dump(req.responseText);
+  var url = createWebPage();
 
-  window.open(page, "my window", 'width=800,height=600');
+  //url.open()
+  //window.open(url, "my window", 'width=800,height=600');
 }
