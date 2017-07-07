@@ -12,11 +12,15 @@ function fillArray(posts) {
   }
 }
 
+function showImages(posts) {
+  for(i = 0; i < posts.length; ++i) posts[i].showImage();
+}
 
 function main() {
   var username = document.getElementById('searchTxt').value;
   var url = "https://www.instagram.com/" + username + "/media/";
   var posts = new Array();
   fillArray(posts);
+  showImages(posts);
 
 }
