@@ -1,5 +1,4 @@
-var JsonContent =
-{
+var JsonContent = {
 	"items": [{
 		"id": "1506046721884314657_271684459",
 		"code": "BTmjYOhDlwh",
@@ -1793,5 +1792,4 @@ var JsonContent =
 	}],
 	"more_available": true,
 	"status": "ok"
-}
 }
