@@ -8,11 +8,14 @@ function fillArray(posts) {
 
     item = new postInfo(url, htags, likes);
     posts[i] = item;
-
   }
 }
 
 function showImages(posts) {
+  var div = document.createElement('div');
+  div.id = "mainContainer";
+  div.className = "content-panel";
+  document.body.appendChild(div);
   for(i = 0; i < posts.length; ++i) posts[i].showImage();
 }
 

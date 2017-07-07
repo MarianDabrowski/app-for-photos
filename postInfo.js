@@ -8,5 +8,6 @@ function postInfo(imageUrl, htags, numLikes) {
 function showImage() {
   var image = document.createElement("img");
   image.src = this.url;
-  document.body.appendChild(image);
+  image.className = "myImage";
+  document.getElementById("mainContainer").appendChild(image);
 }
