@@ -1,4 +1,4 @@
-jsonContent {
+var JsonContent =
 {
 	"items": [{
 		"id": "1506046721884314657_271684459",
