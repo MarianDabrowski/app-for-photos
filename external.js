@@ -22,7 +22,7 @@ function goToInstagramPage() {
       num_photos = 20;
 
 $.ajax({
-    url: 'https://api.instagram.com/v1/users/271684459/media/recent',
+      url: 'https://api.instagram.com/v1/users/271684459/media/recent',
     dataType: 'jsonp',
     type: 'GET',
     data: {access_token: token, count: num_photos},
